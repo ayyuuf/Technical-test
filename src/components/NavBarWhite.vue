@@ -1,24 +1,26 @@
 <template>
   <v-app-bar
     position="static"
-    style="background: 'transparent'"
     app
-    color="white"
-    light
+    color="#2161D5"
+    dark
     flat
     class="px-12"
     align="center"
     justify="space-around"
   >
-    <v-img class="logo" src="@/assets/logo.png" justify-space-around></v-img>
+    <v-img
+      class="logo"
+      src="@/assets/logofullwhite.png"
+      justify-space-around
+    ></v-img>
     <v-tabs
       color="blach"
       class="d-flex justify-center"
       v-model="tab"
-      :transition="false"
       :reverse-transition="false"
     >
-      <v-tabs-slider color="white"></v-tabs-slider>
+      <v-tabs-slider color="#2161D5"></v-tabs-slider>
       <v-tab class="text-capitalize" href="/">Home</v-tab>
       <v-tab class="text-capitalize" @click="scroll('product')">Product</v-tab>
       <v-tab class="text-capitalize" @click="scroll('blog')">Blog</v-tab>
@@ -27,9 +29,11 @@
       <v-tab class="text-capitalize" href="/AboutUs">About Us</v-tab>
     </v-tabs>
 
-    <v-btn text class="text-capitalize" link to="/Login"> Sign In </v-btn>
+    <v-btn text class="text-capitalize" link to="/Login" color="white">
+      Sign In
+    </v-btn>
     <v-spacer></v-spacer>
-    <v-btn class="text-capitalize" outlined color="#2161D5" rounded>
+    <v-btn class="text-capitalize" outlined color="white" rounded>
       Sign Up
     </v-btn>
   </v-app-bar>
@@ -48,6 +52,6 @@ export default {
 
 <style scoped>
 .logo {
-  width: 150px;
+  width: 130px;
 }
 </style>

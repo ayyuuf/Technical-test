@@ -34,7 +34,7 @@
             </div>
           </v-col>
 
-          <v-col align="center">
+          <v-col>
             <div style="margin-left: 200px">
               <v-list-item>
                 <v-list-item-title class="text-h6 font-weight-bold"
@@ -49,7 +49,7 @@
             </div>
           </v-col>
 
-          <v-col align="center">
+          <v-col>
             <div>
               <v-list-item>
                 <v-list-item-title class="text-h6 font-weight-bold"
@@ -64,7 +64,7 @@
             </div>
           </v-col>
 
-          <v-col align="center">
+          <v-col>
             <div style="padding-right: 100px">
               <v-list-item>
                 <v-list-item-title class="text-h6 font-weight-bold"

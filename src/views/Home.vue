@@ -34,6 +34,7 @@
               color="primary"
               dark
               class="text-capitalize"
+              to="/NotFound"
             >
               See a Demo
             </v-btn>
@@ -130,7 +131,7 @@
                 <h1 class="font-weight-bold" style="color: white">
                   App Overview 1
                 </h1>
-                <p style="color: white">
+                <p style="color: white; padding-top: 20px">
                   Advanced spatial analysis to understand where and why <br />
                   things happen, identify the target constituency, and optimize
                   <br />
@@ -341,37 +342,6 @@
               </div>
             </v-card>
           </v-col>
-          <!-- <v-col v-for="(item, id) in items" :key="id">
-            <v-card class="rounded-xl" outlined style="wi">
-              <v-list>
-                <v-list-item>
-                  <v-img :src="item.url"></v-img>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title
-                      v-text="item.title"
-                      class="font-weight-bold"
-                    ></v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-subtitle
-                      v-text="item.subtitle1"
-                      class="black--text"
-                    >
-                    </v-list-item-subtitle>
-                    <v-list-item-subtitle
-                      v-text="item.subtitle2"
-                      class="black--text"
-                    >
-                    </v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list>
-            </v-card>
-          </v-col> -->
         </v-row>
       </v-container>
     </div>
@@ -650,7 +620,7 @@ export default {
   padding-top: 30px;
 }
 .overview {
-  width: 200vh;
+  width: 230vh;
   height: 200vh;
   background: linear-gradient(to top, #2161d5 95%, #ffffff 95%);
 }
