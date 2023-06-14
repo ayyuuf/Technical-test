@@ -9,16 +9,23 @@
     justify="space-around"
   >
     <v-img class="logo" src="@/assets/logo.png" justify-space-around></v-img>
-    <v-tabs class="d-flex justify-center">
+    <v-tabs
+      color="blach"
+      class="d-flex justify-center"
+      v-model="tab"
+      :transition="false"
+      :reverse-transition="false"
+    >
+      <v-tabs-slider color="white"></v-tabs-slider>
       <v-tab class="text-capitalize" @click="scroll('home')">Home</v-tab>
       <v-tab class="text-capitalize" @click="scroll('product')">Product</v-tab>
       <v-tab class="text-capitalize" @click="scroll('blog')">Blog</v-tab>
-      <v-tab class="text-capitalize" @click="scroll('princing')">Pricing</v-tab>
+      <v-tab class="text-capitalize" @click="scroll('pricing')">Pricing</v-tab>
       <v-tab class="text-capitalize" @click="scroll('contact')">Contact</v-tab>
-      <v-tab class="text-capitalize" @click="scroll('about')">About Us</v-tab>
+      <v-tab class="text-capitalize" @click="link('/About')">About Us</v-tab>
     </v-tabs>
 
-    <v-btn text class="text-capitalize"> Sign In </v-btn>
+    <v-btn text class="text-capitalize" link to="/Login"> Sign In </v-btn>
     <v-spacer></v-spacer>
     <v-btn class="text-capitalize" outlined color="#2161D5" rounded>
       Sign Up

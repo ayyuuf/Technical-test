@@ -2,9 +2,15 @@
   <v-app>
     <SideBar />
     <AppBar />
-
     <div class="content">
-      <v-container fluid style="max-width: 160vh">
+      <v-row style="padding-top: 40px; margin-left: 50px">
+        <v-icon>mdi-home-outline</v-icon>
+        <v-icon>mdi-chevron-right</v-icon>
+        <v-text>Statistic</v-text>
+        <v-icon>mdi-chevron-right</v-icon>
+        <v-text>Wilayah</v-text>
+      </v-row>
+      <v-container fluid style="max-width: 160vh; padding-top: 20px">
         <v-row>
           <v-col>
             <v-card style="height: 50vh" color="white" class="rounded-lg">
@@ -24,7 +30,11 @@
             </v-card>
           </v-col>
           <v-col>
-            <v-card style="height: 50vh" color="white" class="rounded-lg">
+            <v-card
+              style="height: 50vh; width: 50vh"
+              color="white"
+              class="rounded-lg"
+            >
               <highcharts :options="ChartOptions4"></highcharts>
             </v-card>
           </v-col>
@@ -96,74 +106,37 @@ export default {
         type: "column",
       },
       title: {
-        text: "Number of Applications",
-      },
-      subtitle: {
-        text: "BY COUNTRY",
+        text: "Prasarana Air Bersih ",
+        align: "left",
       },
       xAxis: {
         visible: false,
       },
-      yAxis: {
-        visible: false,
-      },
-      exporting: {
-        enabled: false,
+      yAxis: {},
+
+      plotOptions: {
+        column: {
+          stacking: 10,
+        },
       },
       legend: {
-        enabled: true,
-        align: "right",
-        verticalAlign: "middle",
-        layout: "vertical",
-        padding: 3,
-        itemMarginTop: 5,
-        itemMarginBottom: 5,
-        itemStyle: {
-          lineHeight: "14px",
-        },
-        symbolHeight: 12,
-        symbolWidth: 12,
-        symbolRadius: 6,
-      },
-      tooltip: {
-        formatter: function () {
-          return '<b style="color:' + this.point.color + '">' + this.y + "</b>";
-        },
-        useHTML: true,
-        borderWidth: 0,
-        style: {
-          padding: 0,
-          fontSize: "16px",
-        },
-        shadow: false,
+        enabled: false,
       },
       series: [
         {
-          name: "United Kingdom",
-          color: "#32323A",
-          data: [[294]],
+          data: [4, 4, 2, 4, 4],
+          color: "#2161D5",
         },
         {
-          name: "USA",
-          color: "#EB4825",
-          data: [[65]],
+          data: [null, null, null, null, null],
         },
         {
-          name: "United Arab Emirates",
-          color: "#F7CC1E",
-          data: [[35]],
-        },
-        {
-          name: "India",
-          color: "#24C746",
-          data: [[23]],
-        },
-        {
-          name: "Canada",
-          color: "#2587EC",
-          data: [[18]],
+          data: [null, null, null, null, null],
         },
       ],
+      credits: {
+        enabled: false,
+      },
     },
 
     ChartOptions3: {
@@ -232,10 +205,11 @@ export default {
     ChartOptions4: {
       chart: {
         polar: true,
+        widht: "300px",
       },
 
       title: {
-        text: "Highcharts Polar Chart",
+        text: "Jumlah Penduduk Tiap Dusun",
         align: "left",
       },
 
@@ -251,6 +225,7 @@ export default {
         labels: {
           format: "{value}°",
         },
+        visible: false,
       },
 
       yAxis: {
@@ -267,22 +242,25 @@ export default {
           groupPadding: 0,
         },
       },
+      legend: {
+        enabled: false,
+      },
 
       series: [
         {
           type: "column",
-          name: "Column",
+          color: "#2161D5",
           data: [8, 7, 6, 5, 4, 3, 2, 1],
           pointPlacement: "between",
         },
         {
           type: "line",
-          name: "Line",
+          color: "#8697A8",
           data: [1, 2, 3, 4, 5, 6, 7, 8],
         },
         {
           type: "area",
-          name: "Area",
+          color: "#898BE7",
           data: [1, 8, 2, 7, 3, 6, 4, 5],
         },
       ],
@@ -411,9 +389,9 @@ export default {
           ],
         },
       ],
-    },
-    credits: {
-      enabled: false,
+      credits: {
+        enabled: false,
+      },
     },
 
     ChartOptions7: {
